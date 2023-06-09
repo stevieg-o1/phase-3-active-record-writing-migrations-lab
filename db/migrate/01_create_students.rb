@@ -1,4 +1,8 @@
-class CreateStudents < ActiveRecord::Migration[6.1]
+class ChangeDatatypeForBirthday < ActiveRecord::Migration[version_number]
   def change
+    create_table :students do |t|
+      t.column :birthday, :new_datatype
+      # ...
+    end
   end
 end
